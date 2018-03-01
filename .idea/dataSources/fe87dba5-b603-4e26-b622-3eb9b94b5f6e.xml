@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - yii2_loc@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="yii2_loc">
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="category"/>
+    <table id="4" parent="2" name="product"/>
+    <table id="5" parent="2" name="brand"/>
+    <table id="6" parent="2" name="brand_product"/>
+    <table id="7" parent="2" name="sliders"/>
+    <column id="8" parent="3" name="id">
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="9" parent="3" name="parent_id">
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="10" parent="3" name="name">
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="11" parent="3" name="keywords">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="12" parent="3" name="description">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="13" parent="3" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="14" parent="4" name="id">
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="15" parent="4" name="category_id">
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="4" name="name">
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="4" name="content">
+      <DataType>text|0</DataType>
+    </column>
+    <column id="18" parent="4" name="price">
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="19" parent="4" name="keywords">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="20" parent="4" name="description">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="21" parent="4" name="img">
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;no-image.png&apos;</DefaultExpression>
+    </column>
+    <column id="22" parent="4" name="hit">
+      <DataType>enum(&apos;0&apos;, &apos;1&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="23" parent="4" name="new">
+      <DataType>enum(&apos;0&apos;, &apos;1&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="24" parent="4" name="sale">
+      <DataType>enum(&apos;0&apos;, &apos;1&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="25" parent="4" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="5" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="5" name="name">
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="28" parent="5" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="6" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="6" name="name">
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="6" name="brand_id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="32" parent="6" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="7" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="7" name="title">
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="7" name="description">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="36" parent="7" name="image">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="37" parent="7" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
